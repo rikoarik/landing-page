@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     'Dari pesanan pertama sampai layanan anggota dan pendaftaran institusi. Kenali ClosePay F&B Suite, Member, dan Institutional.',
   icons: {
-    icon: '/assets/brand/closepay-symbol.png',
+    icon: '/assets/brand/closepay-symbol.webp',
   },
 };
 
