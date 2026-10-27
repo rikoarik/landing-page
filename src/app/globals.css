@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper: #F5F3EE;
+  --color-ink: #202B2A;
+  --color-forest: #286457;
+  --color-dusty: #7795A0;
+  --color-stone: #E7E4DC;
+  --color-burnt: #C76E4D;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F5F3EE;
+  color: #202B2A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #F5F3EE;
+  color: #202B2A;
+  overflow-x: hidden;
+  selection-background-color: #286457;
+  selection-color: #F5F3EE;
+}
+
+::selection {
+  background-color: #286457;
+  color: #F5F3EE;
+}
+
+/* Accessibility: respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle grain overlay utility */
+.texture-overlay {
+  background-image: radial-gradient(rgba(32, 43, 42, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
