@@ -75,10 +75,26 @@ root/
 │       └── src/
 │           ├── components/    # Hero, Showcase, Specs, Interactive Demos
 │           └── styles/        # Design tokens & animasi
+├── docs/                      # Dokumentasi & Acuan Riset Proyek
+│   ├── README.md              # Indeks dokumentasi proyek
+│   └── riset/                 # 5 Dokumen riset mendalam
+│       ├── deep-research-report (9).md  # 01 Product & Brand Intelligence
+│       ├── deep-research-report (7).md  # 02 Brand Communication & Copywriting
+│       ├── deep-research-report (8).md  # 03 Facts & Evidence (Ground Truth)
+│       ├── deep-research-report (5).md  # 04 Kajian Art Direction Kreatif
+│       └── deep-research-report (6).md  # 05 Visual Reference Research (Awwwards)
 └── public/
     └── assets/
         └── closepay/          # Screenshot UI asli, mockup produk, visual aset
 ```
+
+### Rujukan Dokumen Riset Lengkap (`docs/riset/`)
+Untuk pendalaman analisis, verifikasi bukti kode, dan spesifikasi visual lengkap, rujuk file acuan di dalam repositori:
+- [**01 Product Intelligence**](file:///Users/macbookm2/Documents/antigravity/noble-mendel/docs/riset/deep-research-report%20(9).md): Portofolio produk ClosePay, persona pengguna, alur kerja, diferensiasi pasar, dan sasaran konversi.
+- [**02 Brand Communication**](file:///Users/macbookm2/Documents/antigravity/noble-mendel/docs/riset/deep-research-report%20(7).md): Pedoman *tone of voice*, hierarki pesan, dan kamus copy siap pakai Bahasa Indonesia.
+- [**03 Facts & Evidence (Ground Truth)**](file:///Users/macbookm2/Documents/antigravity/noble-mendel/docs/riset/deep-research-report%20(8).md): Audit keabsahan kode sumber vs klaim promosi (anti-halusinasi fitur).
+- [**04 Art Direction Kreatif**](file:///Users/macbookm2/Documents/antigravity/noble-mendel/docs/riset/deep-research-report%20(5).md): Spesifikasi konsep *Kolase Dinamis*, hero visual, showcase 4-kolom, dan timeline animasi Mermaid.
+- [**05 Visual Reference Research**](file:///Users/macbookm2/Documents/antigravity/noble-mendel/docs/riset/deep-research-report%20(6).md): Analisis 10 web referensi pemenang penghargaan dan 12 pola interaksi mutakhir.
 
 ### Endpoint API Utama (Ground Truth)
 - `POST /api/payments/qris`: Pembuatan dan verifikasi status pembayaran QRIS statis/dinamis.
