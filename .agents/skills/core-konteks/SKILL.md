@@ -5,73 +5,101 @@ description: Use when building, designing, styling, or writing copy for the Clos
 
 # Core Konteks: ClosePay Web & Landing Page
 
-Panduan acuan baku untuk pengembangan antarmuka, tata letak, styling, animasi, dan copywriting landing page **ClosePay**.
+Panduan acuan untuk pengembangan antarmuka, tata letak, styling, animasi, aset visual, dan copywriting website **ClosePay**.
 
----
+## 1. Identitas Visual
 
-## 1. Ringkasan & Karakter Produk
-ClosePay adalah platform ekosistem digital untuk tiga sektor:
-- **F&B Suite**: Kasir (POS), Kios mandiri, Kitchen Display (KDS), dan Pengadaan (Purchaser).
-- **Member Suite**: Aplikasi keanggotaan dan verifikasi QR member.
-- **PMB Suite**: Portal pendaftaran digital dan administrasi penerimaan institusi.
+ClosePay harus tampil sebagai brand teknologi yang matang, kreatif, dan mudah didekati.
 
-> **Pendekatan Utama**: *Product-first showcase*. Tampilkan antarmuka produk nyata secara transparan dan berstandar visual tinggi, bukan ilustrasi generik tanpa konteks.
+Arah visual: **contemporary editorial, product-focused, expressive, dan refined**.
 
----
+Bukan dashboard SaaS generik, bukan website fintech neon, dan bukan kumpulan kartu fitur.
 
-## 2. Tech Stack Proyek
-- **Framework**: Next.js (App Router) + React (TypeScript).
-- **Styling**: Tailwind CSS (Utility-first, responsive grid, fluid typography).
-- **Animasi & Motion**:
-  - **GSAP (ScrollTrigger)**: Timeline scroll, pinned sections, dan koreografi berjenjang.
-  - **Framer Motion**: Micro-interactions, magnetic hover buttons, dan transisi komponen.
-- **Ikonografi**: Lucide React + SVG teroptimasi.
+## 2. Color System
 
----
+**Palet usulan baru — belum final/approved.**
 
-## 3. Brand & Art Direction ("Kolase Dinamis")
-Mengadopsi konsep visual **Kolase Dinamis** berstandar Awwwards: energetik, modern, namun tetap profesional dan kredibel untuk B2B.
+| Peran | Warna | HEX |
+|---|---|---|
+| Primary Background | Warm Paper | `#F5F3EE` |
+| Primary Text | Deep Ink | `#202B2A` |
+| Brand Accent | Forest Teal | `#286457` |
+| Secondary Accent | Dusty Blue | `#7795A0` |
+| Surface | Soft Stone | `#E7E4DC` |
+| Expressive Accent | Burnt Orange | `#C76E4D` |
 
-### Design Tokens
-- **Primary Teal**: `#00D19F` (Aksen dinamis, tombol aksi utama, badge aktif).
-- **Secondary Blue**: `#1AA7EC` (Highlight sekunder, status online).
-- **Dark Navy**: `#012D3F` (Latar gelap hero/footer, teks kontras tinggi).
-- **Neutral White**: `#FFFFFF` / Slate `#F8FAFC` (Latar bersih).
-- **Aksen**: Coral `#FF6B4A` & Amber `#FFB800`.
+### Aturan warna
 
-### Tipografi
-- **Headings / Display**: `Poppins` atau `Montserrat` (Bold / Semi-bold, kontras skala tegas).
-- **Body Text**: `Inter` (Regular / Medium, line-height lega 1.6).
+- Gunakan warna netral sebagai fondasi utama.
+- Forest Teal menjadi identitas aksen, bukan warna yang memenuhi seluruh halaman.
+- Burnt Orange hanya untuk momen visual tertentu.
+- Hindari kombinasi teal neon, biru elektrik, dan gradient glow.
+- Hindari banyak warna aksen dalam satu section.
+- Warna harus mendukung komposisi, bukan menggantikan kualitas desain.
 
-### Interaktivitas & Aksesibilitas
-- **Magnetic Buttons**: Efek kursor magnetik pada CTA utama.
-- **Hover Lift**: Kartu produk terangkat halus (`translateY(-4px)` + shadow) saat di-hover.
-- **Aksesibilitas**: Kontras teks memenuhi WCAG AA. Wajib mendukung `@media (prefers-reduced-motion: reduce)` tanpa memutus navigasi.
+## 3. Layout & Typography
 
----
+- Gunakan pendekatan editorial dengan tipografi ekspresif dan hierarki yang tegas.
+- Kombinasikan headline berskala besar dengan teks pendukung yang ringkas.
+- Manfaatkan ruang kosong, komposisi asimetris, dan ritme antar-section.
+- Hindari grid kartu berulang sebagai struktur utama halaman.
+- Gunakan product imagery sebagai bagian dari komposisi visual, bukan sekadar screenshot di dalam kotak.
+- Desktop dan mobile harus memiliki komposisi yang dirancang secara sengaja.
 
-## 4. Tone of Voice & Copywriting
-- **Gaya Bahasa**: Bahasa Indonesia alami, percaya diri, ringkas, dan solutif.
-- **Pantangan**: Jangan gunakan jargon korporat klise atau klaim berlebihan tanpa bukti.
-- **Contoh Copy Baku**:
-  - *Headline Hero*: “Jualan Pintar, Gaya Baru”
-  - *Subheadline Hero*: “ClosePay menghubungkan kasir, kios, dan dapur Anda dalam satu platform digital interaktif.”
-  - *CTA Utama*: “Coba Demo Sekarang” | “Jadwalkan Konsultasi”
-  - *F&B Section*: “Platform All-in-One untuk Restoran Anda”
+## 4. Artwork & Motion
 
----
+Gunakan workflow **asset-first**.
 
-## 5. Aturan Koding Frontend
-1. **Strict TypeScript**: Semua props dan state wajib memiliki tipe yang jelas. Hindari `any`.
-2. **Responsif Multi-Layar**: Wajib teruji dan nyaman di Mobile (375px), Tablet (768px), dan Desktop (1440px).
-3. **Pemisahan Logika UI**: Komponen presentasional terpisah dari custom hooks atau state helper.
-4. **Performa Aset**: Gunakan format WebP atau SVG terkompresi. Aset visual ditempatkan di `/public/assets/closepay/`.
+Sebelum membangun section visual, tentukan art direction dan buat aset orisinal yang konsisten: hero artwork, layered elements, product framing, section artwork, dan elemen dekoratif.
 
----
+Gunakan `scroll-craft`, `taste-ui`, `antislop-ui`, dan `antislop-copywriting` sesuai instruksi skill yang tersedia.
 
-## 6. Referensi Riset
-Jika membutuhkan data pendukung, persona lengkap, atau benchmark kompetitor, buka dokumen terkait di `docs/riset/`:
-- `docs/riset/deep-research-report (9).md` (Product Intelligence)
-- `docs/riset/deep-research-report (7).md` (Brand Communication)
-- `docs/riset/deep-research-report (5).md` (Kajian Art Direction)
-- `docs/riset/deep-research-report (6).md` (Benchmark Visual Awwwards)
+Motion dapat mencakup layered parallax, scroll-triggered reveals, editorial transitions, dan interaksi pointer yang bermakna.
+
+Animasi harus mendukung cerita produk, tetap responsif, dan menghormati `prefers-reduced-motion`. Jangan gunakan scroll hijacking.
+
+## 5. Product Presentation
+
+ClosePay mencakup:
+
+- **F&B Suite:** Staff POS, Kiosk, Kitchen, Purchaser
+- **Member**
+- **Institutional / PMB**
+
+Tampilkan produk sebagai bagian dari pengalaman brand yang kohesif.
+
+Gunakan antarmuka produk asli jika tersedia. Jangan membuat screenshot palsu atau mengklaim fitur yang belum terverifikasi.
+
+Website marketing tidak boleh berubah menjadi simulasi dashboard operasional.
+
+## 6. Copywriting
+
+Gunakan bahasa Indonesia yang natural, percaya diri, dan spesifik.
+
+- Hindari jargon korporat dan slogan teknologi generik.
+- Hindari klaim seperti “tercepat”, “100% aman”, atau “real-time” tanpa bukti.
+- Utamakan manfaat yang benar-benar didukung fungsi produk.
+- Headline harus memiliki karakter, bukan sekadar terdengar futuristis.
+- CTA singkat, jelas, dan relevan dengan tindakan pengguna.
+
+## 7. Batasan Desain
+
+Jangan mengulangi desain sebelumnya yang didominasi latar gelap, kartu KPI, panel sinkronisasi, simulasi POS besar, dan informasi developer.
+
+Jangan menganggap rekomendasi visual dari dokumen riset sebagai desain yang sudah disetujui.
+
+**Palet dan arah visual dalam dokumen ini merupakan fondasi usulan untuk dieksplorasi, bukan keputusan final pengguna.**
+
+## 8. Standar Implementasi
+
+Website harus memiliki:
+
+- Aset visual orisinal yang benar-benar digunakan
+- Art direction konsisten
+- Interaksi scroll yang fungsional
+- Tampilan desktop dan mobile yang matang
+- Copywriting yang akurat
+- Navigasi dan CTA yang bekerja
+- Hasil render yang diperiksa langsung di browser
+
+**Prinsip utama: ClosePay harus terasa seperti brand dengan identitas desain sendiri, bukan template SaaS yang dipercantik dengan animasi.**
