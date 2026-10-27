@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
+import { Plus_Jakarta_Sans, Archivo } from 'next/font/google';
 import './globals.css';
 
 const sans = Plus_Jakarta_Sans({
@@ -8,17 +8,16 @@ const sans = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
-const display = Playfair_Display({
+const display = Archivo({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  style: ['normal', 'italic'],
 });
 
 export const metadata: Metadata = {
-  title: 'ClosePay — Platform Transaksi & Layanan Digital Terpadu',
+  title: 'ClosePay | Dekat dengan keseharian',
   description:
-    'Mendukung aktivitas transaksi non-tunai, interaksi anggota, operasional merchant, dan pengelolaan ekosistem bisnis terpadu oleh PT Teknologi Kartu Indonesia.',
+    'Dari pesanan pertama sampai layanan anggota dan pendaftaran institusi. Kenali ClosePay F&B Suite, Member, dan Institutional.',
   icons: {
     icon: '/assets/brand/closepay-symbol.png',
   },
@@ -31,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={`${sans.variable} ${display.variable}`}>
-      <body className="font-sans antialiased bg-paper text-ink selection:bg-forest selection:text-paper min-h-screen">
+      <body>
         {children}
       </body>
     </html>

@@ -1,0 +1,106 @@
+[
+  {
+    "name": "desktop",
+    "checks": [
+      "Hero: photo loaded, loading text removed",
+      "All anchor targets exist",
+      "Desktop nav and contact navigate to correct sections",
+      "Staff POS and Kiosk: correct source retained through all four order states",
+      "Next order and restart advance/reset state",
+      "Scroll traverses all four states; resume returns control to scrolling",
+      "Purchaser expands/closes; contact carries F&B context",
+      "Member features switch; Member context carries to contact",
+      "All PMB stages switch; Institutional context carries to contact",
+      "Email CTA click produces verified recipient and selected product; native mail app not launched",
+      "All image assets loaded after visiting chapters"
+    ],
+    "overflow": false,
+    "errors": [],
+    "smallTargets": [],
+    "violations": []
+  },
+  {
+    "name": "mobile",
+    "checks": [
+      "Hero: photo loaded, loading text removed",
+      "Hero CTA within first viewport",
+      "All anchor targets exist",
+      "Menu opens; Escape closes and restores focus; all four menu links navigate and close",
+      "Staff POS and Kiosk: correct source retained through all four order states",
+      "Next order and restart advance/reset state",
+      "Purchaser expands/closes; contact carries F&B context",
+      "Member features switch; Member context carries to contact",
+      "All PMB stages switch; Institutional context carries to contact",
+      "Email CTA click produces verified recipient and selected product; native mail app not launched",
+      "All image assets loaded after visiting chapters"
+    ],
+    "overflow": false,
+    "errors": [],
+    "smallTargets": [],
+    "violations": []
+  },
+  {
+    "name": "compact",
+    "checks": [
+      "Hero: photo loaded, loading text removed",
+      "Hero CTA within first viewport",
+      "All anchor targets exist",
+      "Menu opens; Escape closes and restores focus; all four menu links navigate and close",
+      "Staff POS and Kiosk: correct source retained through all four order states",
+      "Next order and restart advance/reset state",
+      "Purchaser expands/closes; contact carries F&B context",
+      "Member features switch; Member context carries to contact",
+      "All PMB stages switch; Institutional context carries to contact",
+      "Email CTA click produces verified recipient and selected product; native mail app not launched",
+      "All image assets loaded after visiting chapters"
+    ],
+    "overflow": false,
+    "errors": [],
+    "smallTargets": [],
+    "violations": []
+  },
+  {
+    "name": "tablet",
+    "checks": [
+      "Hero: photo loaded, loading text removed",
+      "All anchor targets exist",
+      "Menu opens; Escape closes and restores focus; all four menu links navigate and close",
+      "Staff POS and Kiosk: correct source retained through all four order states",
+      "Next order and restart advance/reset state",
+      "Purchaser expands/closes; contact carries F&B context",
+      "Member features switch; Member context carries to contact",
+      "All PMB stages switch; Institutional context carries to contact",
+      "Email CTA click produces verified recipient and selected product; native mail app not launched",
+      "All image assets loaded after visiting chapters"
+    ],
+    "overflow": false,
+    "errors": [],
+    "smallTargets": [],
+    "violations": []
+  },
+  {
+    "name": "reduced",
+    "checks": [
+      "Hero: photo loaded, loading text removed",
+      "All anchor targets exist",
+      "Desktop nav and contact navigate to correct sections",
+      "Staff POS and Kiosk: correct source retained through all four order states",
+      "Next order and restart advance/reset state",
+      "Purchaser expands/closes; contact carries F&B context",
+      "Member features switch; Member context carries to contact",
+      "All PMB stages switch; Institutional context carries to contact",
+      "Email CTA click produces verified recipient and selected product; native mail app not launched",
+      "All image assets loaded after visiting chapters"
+    ],
+    "overflow": false,
+    "errors": [],
+    "smallTargets": [],
+    "violations": []
+  },
+  {
+    "name": "image fallback",
+    "checks": [
+      "Blocked photo shows understandable error; retry reloads image successfully"
+    ]
+  }
+]

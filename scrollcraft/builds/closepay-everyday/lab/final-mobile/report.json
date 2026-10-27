@@ -1,0 +1,794 @@
+{
+  "doc": {
+    "height": 5143,
+    "vh": 844,
+    "acts": [
+      "flow",
+      "flow",
+      "flow",
+      "flow",
+      "flow",
+      "flow"
+    ],
+    "world": null
+  },
+  "report": [
+    {
+      "i": 0,
+      "y": 0,
+      "pct": 0,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        1242
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 1,
+      "y": 38,
+      "pct": 1,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        1204
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 2,
+      "y": 199,
+      "pct": 5,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        1043
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 3,
+      "y": 274,
+      "pct": 6,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        968
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 4,
+      "y": 439,
+      "pct": 10,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        803
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 5,
+      "y": 510,
+      "pct": 12,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        732
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 6,
+      "y": 512,
+      "pct": 12,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        730
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 7,
+      "y": 745,
+      "pct": 17,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        497
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 8,
+      "y": 824,
+      "pct": 19,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        418
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 9,
+      "y": 834,
+      "pct": 19,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        408
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 10,
+      "y": 981,
+      "pct": 23,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        261
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 11,
+      "y": 1217,
+      "pct": 28,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        25
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 12,
+      "y": 1229,
+      "pct": 29,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        13
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 13,
+      "y": 1624,
+      "pct": 38,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 99.79% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -382
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 14,
+      "y": 1650,
+      "pct": 38,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 98.17% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -408
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 15,
+      "y": 2019,
+      "pct": 47,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 6.83% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -777
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 16,
+      "y": 2023,
+      "pct": 47,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 6.18% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -781
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 17,
+      "y": 2396,
+      "pct": 56,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -1154
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 18,
+      "y": 2414,
+      "pct": 56,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -1172
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 19,
+      "y": 2745,
+      "pct": 64,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -1503
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 20,
+      "y": 2768,
+      "pct": 64,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -1526
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 21,
+      "y": 3092,
+      "pct": 72,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -1850
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 22,
+      "y": 3141,
+      "pct": 73,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -1899
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 23,
+      "y": 3440,
+      "pct": 80,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -2198
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 24,
+      "y": 3514,
+      "pct": 82,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -2272
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 25,
+      "y": 3703,
+      "pct": 86,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -2461
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 26,
+      "y": 3787,
+      "pct": 88,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -2545
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 27,
+      "y": 3985,
+      "pct": 93,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -2743
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 28,
+      "y": 4134,
+      "pct": 96,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -2892
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 29,
+      "y": 4267,
+      "pct": 99,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -3025
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 30,
+      "y": 4299,
+      "pct": 100,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [
+        "inset(0px 0% 0px 0px)"
+      ],
+      "act": "flow",
+      "stages": [
+        -3057
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    }
+  ],
+  "consoleErrors": [],
+  "failed": []
+}

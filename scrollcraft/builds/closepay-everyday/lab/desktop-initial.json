@@ -1,0 +1,43 @@
+{
+  "result": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "sections": [
+      {
+        "id": "home",
+        "height": 812,
+        "top": 88
+      },
+      {
+        "id": "",
+        "height": 627.25,
+        "top": 900
+      },
+      {
+        "id": "fnb",
+        "height": 1800,
+        "top": 1527.25
+      },
+      {
+        "id": "member",
+        "height": 960.015625,
+        "top": 3327.25
+      },
+      {
+        "id": "institutional",
+        "height": 1126.640625,
+        "top": 4287.265625
+      },
+      {
+        "id": "contact",
+        "height": 838.390625,
+        "top": 5413.90625
+      }
+    ],
+    "broken": [
+      "http://localhost:4500/assets/editorial/member.webp",
+      "http://localhost:4500/assets/editorial/institution.webp"
+    ]
+  },
+  "errors": []
+}
