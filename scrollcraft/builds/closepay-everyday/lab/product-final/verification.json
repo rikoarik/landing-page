@@ -1,0 +1,98 @@
+[
+  {
+    "name": "desktop",
+    "checks": [
+      "All navigation targets exist; desktop/mobile product links work; mobile Escape restores focus",
+      "Existing Staff POS/Kiosk ticket, four states, next and restart remain functional",
+      "Purchaser expands, context CTA works, accordion closes",
+      "All five F&B activities display the corresponding original screenshot and active state",
+      "Member discovery, variants, checkout, payment, login, back, client/cashier comparison and contact context work",
+      "KRS, class schedule, billing, dashboard and SIAKAD contact context work",
+      "All PMB stages change the matching editorial folio, accessible description and contact context; illustration disclosure visible",
+      "All three viewers: focus/context, original image, original-size zoom, fit, Escape, close, focus return and Lenis pause/resume",
+      "All contact contexts form correct mailto; click intercepted without sending"
+    ],
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "violations": []
+  },
+  {
+    "name": "mobile",
+    "checks": [
+      "All navigation targets exist; desktop/mobile product links work; mobile Escape restores focus",
+      "Existing Staff POS/Kiosk ticket, four states, next and restart remain functional",
+      "Purchaser expands, context CTA works, accordion closes",
+      "All five F&B activities display the corresponding original screenshot and active state",
+      "Member discovery, variants, checkout, payment, login, back, client/cashier comparison and contact context work",
+      "KRS, class schedule, billing, dashboard and SIAKAD contact context work",
+      "All PMB stages change the matching editorial folio, accessible description and contact context; illustration disclosure visible",
+      "All three viewers: focus/context, original image, original-size zoom, fit, Escape, close, focus return and Lenis pause/resume",
+      "All contact contexts form correct mailto; click intercepted without sending"
+    ],
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "violations": []
+  },
+  {
+    "name": "compact",
+    "checks": [
+      "All navigation targets exist; desktop/mobile product links work; mobile Escape restores focus",
+      "Existing Staff POS/Kiosk ticket, four states, next and restart remain functional",
+      "Purchaser expands, context CTA works, accordion closes",
+      "All five F&B activities display the corresponding original screenshot and active state",
+      "Member discovery, variants, checkout, payment, login, back, client/cashier comparison and contact context work",
+      "KRS, class schedule, billing, dashboard and SIAKAD contact context work",
+      "All PMB stages change the matching editorial folio, accessible description and contact context; illustration disclosure visible",
+      "All three viewers: focus/context, original image, original-size zoom, fit, Escape, close, focus return and Lenis pause/resume",
+      "All contact contexts form correct mailto; click intercepted without sending"
+    ],
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "violations": []
+  },
+  {
+    "name": "tablet",
+    "checks": [
+      "All navigation targets exist; desktop/mobile product links work; mobile Escape restores focus",
+      "Existing Staff POS/Kiosk ticket, four states, next and restart remain functional",
+      "Purchaser expands, context CTA works, accordion closes",
+      "All five F&B activities display the corresponding original screenshot and active state",
+      "Member discovery, variants, checkout, payment, login, back, client/cashier comparison and contact context work",
+      "KRS, class schedule, billing, dashboard and SIAKAD contact context work",
+      "All PMB stages change the matching editorial folio, accessible description and contact context; illustration disclosure visible",
+      "All three viewers: focus/context, original image, original-size zoom, fit, Escape, close, focus return and Lenis pause/resume",
+      "All contact contexts form correct mailto; click intercepted without sending"
+    ],
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "violations": []
+  },
+  {
+    "name": "reduced",
+    "checks": [
+      "All navigation targets exist; desktop/mobile product links work; mobile Escape restores focus",
+      "Existing Staff POS/Kiosk ticket, four states, next and restart remain functional",
+      "Purchaser expands, context CTA works, accordion closes",
+      "All five F&B activities display the corresponding original screenshot and active state",
+      "Member discovery, variants, checkout, payment, login, back, client/cashier comparison and contact context work",
+      "KRS, class schedule, billing, dashboard and SIAKAD contact context work",
+      "All PMB stages change the matching editorial folio, accessible description and contact context; illustration disclosure visible",
+      "All three viewers: focus/context, original image, original-size zoom, fit, Escape, close, focus return and Lenis pause/resume",
+      "All contact contexts form correct mailto; click intercepted without sending"
+    ],
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "violations": []
+  },
+  {
+    "name": "product image error",
+    "checks": [
+      "Failed screenshot shows visible retry; retry loads unchanged original successfully"
+    ]
+  }
+]

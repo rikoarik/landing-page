@@ -2,10 +2,16 @@ import { chromium } from 'playwright-core';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 
-const output = 'scrollcraft/builds/closepay-everyday/lab/motion';
+const output = process.env.CLOSEPAY_QA_OUTPUT || 'scrollcraft/builds/closepay-everyday/lab/motion';
+const url = process.env.CLOSEPAY_QA_URL || 'http://localhost:4500';
 await fs.mkdir(output, { recursive: true });
 const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
 const results = {};
+const disableNativePointer = () => {
+  Element.prototype.requestPointerLock = () => Promise.reject(new Error('disabled for QA'));
+  Element.prototype.setPointerCapture = () => {};
+  Element.prototype.releasePointerCapture = () => {};
+};
 process.on('uncaughtException', async error => {
   await fs.writeFile(`${output}/failure.json`, JSON.stringify({ message: error.message, results }, null, 2));
   await browser.close();
@@ -13,6 +19,7 @@ process.on('uncaughtException', async error => {
   process.exitCode = 1;
 });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+await context.addInitScript(disableNativePointer);
 const page = await context.newPage();
 const errors = [];
 page.on('pageerror', error => errors.push(error.message));
@@ -24,7 +31,7 @@ await page.addInitScript(() => {
   })).observe({ type: 'layout-shift', buffered: true });
   new PerformanceObserver(list => list.getEntries().forEach(entry => window.__longTasks.push(entry.duration))).observe({ type: 'longtask', buffered: true });
 });
-await page.goto('http://localhost:4500', { waitUntil: 'domcontentloaded' });
+await page.goto(url, { waitUntil: 'domcontentloaded' });
 await page.locator('html.sc-ready').waitFor();
 await page.screenshot({ path: `${output}/entrance-early.png` });
 await page.waitForTimeout(500);
@@ -81,7 +88,7 @@ assert.equal(await page.locator('.hero-photo img').evaluate(e => getComputedStyl
 results.offscreenAmbient = 'Paused when hero leaves viewport';
 
 await page.locator('.desktop-nav a[href="#fnb"]').click(); await page.waitForTimeout(1300);
-const bounds = await page.locator('#fnb').evaluate(e => ({ top: e.getBoundingClientRect().top + scrollY, height: e.offsetHeight }));
+const bounds = await page.locator('.order-scroll-span').evaluate(e => ({ top: e.getBoundingClientRect().top + scrollY, height: e.offsetHeight }));
 const stages = [];
 for (const fraction of [0.1, 0.36, 0.62, 0.9]) {
   await page.evaluate(y => window.scrollTo(0, y), bounds.top + (bounds.height - 900) * fraction);
@@ -151,8 +158,9 @@ assert.equal(await page.locator('.ticket-status strong').innerText(), 'Selesai d
 results.keyboard = 'Enter navigates and transfers focus; Enter/Space operate origin and stages with visible focus outline';
 
 const mobileContext = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1 });
+await mobileContext.addInitScript(disableNativePointer);
 const mobile = await mobileContext.newPage();
-await mobile.goto('http://localhost:4500', { waitUntil: 'networkidle' }); await mobile.waitForTimeout(1200);
+await mobile.goto(url, { waitUntil: 'networkidle' }); await mobile.waitForTimeout(1200);
 const mobileClient = await mobileContext.newCDPSession(mobile);
 await mobileClient.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 190, y: 680 }] });
 for (let y = 650; y >= 200; y -= 50) { await mobileClient.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: 190, y }] }); await mobile.waitForTimeout(20); }
@@ -166,7 +174,7 @@ await mobile.close();
 
 const noJs = await browser.newContext({ viewport: { width: 390, height: 844 }, javaScriptEnabled: false });
 const staticPage = await noJs.newPage();
-await staticPage.goto('http://localhost:4500', { waitUntil: 'networkidle' });
+await staticPage.goto(url, { waitUntil: 'networkidle' });
 assert(await staticPage.locator('h1').isVisible());
 assert.equal(await staticPage.locator('.hero-photo-frame').evaluate(e => getComputedStyle(e).clipPath), 'none');
 results.noJavaScript = 'Server-rendered headline, imagery, section content and anchors remain visible';

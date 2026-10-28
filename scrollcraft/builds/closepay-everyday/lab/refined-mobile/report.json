@@ -1,0 +1,871 @@
+{
+  "doc": {
+    "height": 8901,
+    "vh": 844,
+    "acts": [
+      "flow",
+      "flow",
+      "flow",
+      "flow",
+      "flow",
+      "flow",
+      "flow"
+    ],
+    "world": null
+  },
+  "report": [
+    {
+      "i": 0,
+      "y": 0,
+      "pct": 0,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        1263
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 1,
+      "y": 38,
+      "pct": 0,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        1225
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 2,
+      "y": 199,
+      "pct": 2,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        1064
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 3,
+      "y": 278,
+      "pct": 3,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        985
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 4,
+      "y": 486,
+      "pct": 6,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        777
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 5,
+      "y": 512,
+      "pct": 6,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        751
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 6,
+      "y": 518,
+      "pct": 6,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        745
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 7,
+      "y": 758,
+      "pct": 9,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        505
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 8,
+      "y": 824,
+      "pct": 10,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        439
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 9,
+      "y": 998,
+      "pct": 12,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        265
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 10,
+      "y": 1130,
+      "pct": 14,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        133
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 11,
+      "y": 1238,
+      "pct": 15,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        25
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 12,
+      "y": 1774,
+      "pct": 22,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -511
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 13,
+      "y": 2418,
+      "pct": 30,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -1155
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 14,
+      "y": 2980,
+      "pct": 37,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -1717
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 15,
+      "y": 3062,
+      "pct": 38,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -1799
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 16,
+      "y": 3474,
+      "pct": 43,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -2211
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 17,
+      "y": 3706,
+      "pct": 46,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -2443
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 18,
+      "y": 3967,
+      "pct": 49,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -2704
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 19,
+      "y": 4461,
+      "pct": 55,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -3198
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 20,
+      "y": 4703,
+      "pct": 58,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -3440
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 21,
+      "y": 4955,
+      "pct": 61,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -3692
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 22,
+      "y": 5161,
+      "pct": 64,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -3898
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 23,
+      "y": 5448,
+      "pct": 68,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -4185
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 24,
+      "y": 5618,
+      "pct": 70,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -4355
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 25,
+      "y": 6075,
+      "pct": 75,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -4812
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 26,
+      "y": 6235,
+      "pct": 77,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -4972
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 27,
+      "y": 6533,
+      "pct": 81,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -5270
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 28,
+      "y": 6631,
+      "pct": 82,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -5368
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 29,
+      "y": 6990,
+      "pct": 87,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -5727
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 30,
+      "y": 7026,
+      "pct": 87,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -5763
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 31,
+      "y": 7422,
+      "pct": 92,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -6159
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 32,
+      "y": 7442,
+      "pct": 92,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -6179
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 33,
+      "y": 7728,
+      "pct": 96,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -6465
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 34,
+      "y": 7818,
+      "pct": 97,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -6555
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 35,
+      "y": 8013,
+      "pct": 99,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -6750
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    },
+    {
+      "i": 36,
+      "y": 8057,
+      "pct": 100,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -6794
+      ],
+      "segs": [],
+      "custom": [
+        "Staff POS-0-false"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#f0f1e9"
+    }
+  ],
+  "consoleErrors": [],
+  "failed": []
+}

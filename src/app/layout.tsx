@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Archivo } from 'next/font/google';
 import './globals.css';
+import './product-stories.css';
 
 const sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -17,7 +18,7 @@ const display = Archivo({
 export const metadata: Metadata = {
   title: 'ClosePay | Dekat dengan keseharian',
   description:
-    'Dari pesanan pertama sampai layanan anggota dan pendaftaran institusi. Kenali ClosePay F&B Suite, Member, dan Institutional.',
+    'Kenali ClosePay F&B untuk kasir dan dapur, Member untuk pengalaman pelanggan, serta SIAKAD untuk kegiatan akademik kampus.',
   icons: {
     icon: '/assets/brand/closepay-symbol.webp',
   },

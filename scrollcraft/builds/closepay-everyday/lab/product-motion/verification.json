@@ -1,0 +1,122 @@
+{
+  "ownership": "Lenis present; native CSS smooth disabled; old ScrollCraft runtime absent",
+  "ambient": [
+    "matrix(1.0228, 0, 0, 1.0228, 0, 0)",
+    "matrix(1.0155, 0, 0, 1.0155, 0, 0)"
+  ],
+  "pointer": {
+    "left": "matrix(1, 0, 0, 1, -11.8222, 0)",
+    "right": "matrix(1, 0, 0, 1, 10.4606, 0)"
+  },
+  "magnet": {
+    "stableHitbox": true,
+    "iconTransform": "matrix(1, 0, 0, 1, 6.1983, -3.3636)"
+  },
+  "wheel": {
+    "trajectory": [
+      60,
+      245,
+      399,
+      494,
+      543,
+      584,
+      609,
+      624,
+      634,
+      640,
+      644,
+      646
+    ],
+    "description": "Single wheel input eases monotonically to its target without overshoot or doubled travel"
+  },
+  "anchor": {
+    "memberTop": 104.46875,
+    "focus": "member",
+    "activeNav": "#member"
+  },
+  "offscreenAmbient": "Paused when hero leaves viewport",
+  "order": {
+    "stages": [
+      "Staff POS-0-false",
+      "Staff POS-1-false",
+      "Staff POS-2-false",
+      "Staff POS-3-false"
+    ],
+    "manualSelectionHeldWhileScrolling": true
+  },
+  "normalMotionCLS": 0.00004765640070408951,
+  "lifecycle": {
+    "before": {
+      "mousemove": 1,
+      "pointerdown": 2,
+      "pointerup": 1,
+      "touchstart": 2,
+      "touchend": 2,
+      "touchcancel": 1,
+      "mousedown": 1,
+      "mouseup": 1,
+      "click": 1,
+      "auxclick": 1,
+      "dblclick": 1,
+      "contextmenu": 1,
+      "scrollend": 1,
+      "__playwright_global_listeners_check__": 1,
+      "error": 1,
+      "wheel": 4,
+      "load": 1,
+      "resize": 4,
+      "scroll": 1,
+      "touchmove": 1,
+      "closepay:dialog": 1,
+      "keydown": 1,
+      "pageshow": 1,
+      "popstate": 1
+    },
+    "after": {
+      "mousemove": 1,
+      "pointerdown": 2,
+      "pointerup": 1,
+      "touchstart": 2,
+      "touchend": 2,
+      "touchcancel": 1,
+      "mousedown": 1,
+      "mouseup": 1,
+      "click": 1,
+      "auxclick": 1,
+      "dblclick": 1,
+      "contextmenu": 1,
+      "scrollend": 1,
+      "__playwright_global_listeners_check__": 1,
+      "error": 1,
+      "wheel": 4,
+      "load": 1,
+      "resize": 4,
+      "keydown": 1,
+      "pageshow": 1,
+      "popstate": 1,
+      "scroll": 1,
+      "touchmove": 1,
+      "closepay:dialog": 1
+    },
+    "mediaCycles": 3
+  },
+  "reduced": "No Lenis instance, no sticky scene, identical stationary hero pixels after pointer movement and time",
+  "performance": {
+    "cls": 0.7198827258451486,
+    "longTasks": [
+      55
+    ],
+    "transferBytes": 1156130,
+    "frameMedianMs": 16.69999999999709,
+    "frameP95Ms": 16.799999999999272,
+    "clsNote": "Total includes intentional layout changes from switching the OS motion preference, which removes the sticky scene. normalMotionCLS measures load and normal interactions before those changes."
+  },
+  "keyboard": "Enter navigates and transfers focus; Enter/Space operate origin and stages with visible focus outline",
+  "touch": {
+    "scrollY": 465,
+    "naturalFlow": true,
+    "overflow": false
+  },
+  "noJavaScript": "Server-rendered headline, imagery, section content and anchors remain visible",
+  "errors": []
+}

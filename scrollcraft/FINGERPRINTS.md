@@ -63,3 +63,7 @@ If you want to see what a filled-in table looks like, and which shapes tend to
 collide, read `EXAMPLES.md` in the scroll-craft repository. Treat it as
 illustration only: those rows are somebody else's builds and they do **not**
 constrain yours.
+
+### Refinement ClosePay, 2026-10-27
+
+Build yang sama kini memakai sumber UI asli untuk F&B/Member/SIAKAD dan folio editorial PMB sebagai bab ketujuh sebelum kontak. Hero, grammar, navigasi, signature tiket dan penutup dipertahankan. Preview refinement di port 4501. Ini catatan evolusi, bukan build baru atau pengganti baris registry.

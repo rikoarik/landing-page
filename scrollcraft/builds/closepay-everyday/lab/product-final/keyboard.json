@@ -1,0 +1,12 @@
+{
+  "checks": [
+    ".proof-index button: Enter, Space, visible focus",
+    ".member-path button: Enter, Space, visible focus",
+    ".academic-index button: Enter, Space, visible focus",
+    ".admission-tabs button: Enter, Space, visible focus",
+    "Native modal blocks focus on background controls; Escape restores opener; motion preference change preserves scroll lock",
+    "https://closepay.id/privacy-policy: HTTP 200",
+    "https://closepay.id/term-condition: HTTP 200",
+    "Final mobile billing crop: screenshot, no overflow, zero Axe violations"
+  ]
+}

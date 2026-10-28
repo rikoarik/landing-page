@@ -3,9 +3,10 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import { motion, MotionConfig, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
 import { gsap, ScrollTrigger, useClosePayMotion } from './useClosePayMotion';
+import { FnbEvidence, MemberStory, SiakadStory, PmbStory, ProductContext } from './ProductStories';
 
-type Context = 'F&B Suite' | 'Member' | 'Institutional';
-const destinations = [{ href: '#fnb', label: 'F&B Suite' }, { href: '#member', label: 'Member' }, { href: '#institutional', label: 'Institutional' }];
+type Context = ProductContext;
+const destinations = [{ href: '#fnb', label: 'F&B Suite' }, { href: '#member', label: 'Member' }, { href: '#institutional', label: 'SIAKAD' }, { href: '#pmb', label: 'PMB' }];
 
 function ChangingText({ changeKey, children }: { changeKey: string | number; children: ReactNode }) {
   const reduced = useReducedMotion();
@@ -76,7 +77,7 @@ const steps = [
 ];
 
 function OrderJourney({ onContext }: { onContext: (context: Context) => void }) {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const [stage, setStage] = useState(0);
   const [manual, setManual] = useState(false);
@@ -95,7 +96,7 @@ function OrderJourney({ onContext }: { onContext: (context: Context) => void }) 
   }, [manual]);
   function selectStage(index: number) { setManual(true); setStage(index); onContext('F&B Suite'); }
   const active = steps[stage];
-  return <section ref={ref} id="fnb" data-sc-act="flow" className="order-journey"><div className="order-stage" data-sc-stage data-sc-verify-state={`${origin}-${stage}-${supply}`}>
+  return <section id="fnb" data-sc-act="flow" className="order-journey"><div className="order-scroll-span" ref={ref}><div className="order-stage" data-sc-stage data-sc-verify-state={`${origin}-${stage}-${supply}`}>
     <div className="order-heading"><p className="chapter-label">ClosePay F&B Suite</p><h2>Satu pesanan.<br /><span>Banyak yang terhubung.</span></h2><p className="order-intro">Kasir, pelanggan, dan dapur.<br />Temukan peran setiap produk dalam satu alur.</p></div>
     <div className="order-workspace">
       <div className="route-origin"><span className="small-label">Mulai pesanan lewat</span><div className="origin-options" aria-label="Asal pesanan">{(['Staff POS', 'Kiosk'] as const).map(o => <button key={o} aria-pressed={origin === o} onClick={() => { setOrigin(o); setStage(0); setManual(true); onContext('F&B Suite'); }}>{o === 'Staff POS' ? 'Staf kasir' : 'Kiosk mandiri'}<span>{o}</span></button>)}</div><p className="origin-note">{origin === 'Staff POS' ? 'Staf memilih menu dan mencatat pesanan pelanggan.' : 'Pelanggan memilih menu dan memesan sendiri.'}</p></div>
@@ -103,56 +104,26 @@ function OrderJourney({ onContext }: { onContext: (context: Context) => void }) 
       <div className="journey-description"><span className="small-label">{stage === 0 ? origin : 'Kitchen'}</span><h3><ChangingText changeKey={stage}>{active.title}</ChangingText></h3><p><ChangingText changeKey={stage}>{active.body}</ChangingText></p><div className="journey-actions"><button className="text-button" onClick={() => selectStage(stage === 3 ? 0 : stage + 1)}>{stage === 3 ? 'Ulangi pesanan' : 'Lanjutkan pesanan'}<Direction /></button>{manual && <button className="resume-scroll" onClick={() => { setManual(false); setStage(Math.min(3, Math.floor(progress.current * 4))); }}>Ikuti posisi halaman</button>}</div></div>
     </div>
     <div className="supply-row"><span>Di balik meja racik</span><button className="supply-toggle" aria-expanded={supply} aria-controls="supply-detail" onClick={() => { setSupply(!supply); onContext('F&B Suite'); }}>Purchaser: kebutuhan bahan juga punya tempat.<span aria-hidden="true">{supply ? '−' : '+'}</span></button></div>
-    {supply && <motion.div id="supply-detail" className="supply-detail" initial={reduced ? false : { height: 0 }} animate={{ height: 'auto' }} transition={{ duration: reduced ? 0 : 0.35, ease: [0.22, 1, 0.36, 1] }}><p><strong>Permintaan pembelian bahan baku.</strong> Tim mencatat kebutuhan bahan melalui formulir Purchaser. Ini adalah alur pengadaan, terpisah dari status pesanan di dapur.</p><a href="#contact" onClick={() => onContext('F&B Suite')}>Bicarakan kebutuhan <Direction diagonal /></a></motion.div>}
+    {supply && <motion.div id="supply-detail" className="supply-detail" initial={reduced ? false : { clipPath: 'inset(0 0 100% 0)' }} animate={{ clipPath: 'inset(0 0 0% 0)' }} transition={{ duration: reduced ? 0 : 0.35, ease: [0.22, 1, 0.36, 1] }}><p><strong>Permintaan pembelian bahan baku.</strong> Tim mencatat kebutuhan bahan melalui formulir Purchaser. Ini adalah alur pengadaan, terpisah dari status pesanan di dapur.</p><a href="#contact" onClick={() => onContext('F&B Suite')}>Bicarakan kebutuhan <Direction diagonal /></a></motion.div>}
     <p className="illustration-note">Ilustrasi untuk mengenal alur produk. Bukan layar aplikasi atau transaksi langsung.</p>
-  </div></section>;
+  </div></div><FnbEvidence /></section>;
 }
 
 function Member({ onContext }: { onContext: (context: Context) => void }) {
-  const [detail, setDetail] = useState<'register' | 'profile'>('register');
-  return <section id="member" data-sc-act="flow" className="member-section">
-    <div className="member-photo-wrap">
-      <div className="member-reveal"><Photo src="/assets/editorial/member.webp" alt="Ilustrasi interaksi anggota dengan staf di sebuah gerai." /></div>
-      <p className="photo-credit">Ilustrasi keseharian, dibuat untuk ClosePay.</p>
-    </div>
-    <div className="member-copy">
-      <span className="chapter-label">ClosePay Member</span>
-      <h2>Bukan sekadar<br />datang.<br /><span className="text-window"><em className="member-emphasis">Jadi bagian.</em></span></h2>
-      <p>Hubungan dimulai saat seseorang bergabung. ClosePay Member memberi tempat untuk pendaftaran dan profil anggota.</p>
-      <div className="member-options" aria-label="Fitur Member">
-        <button aria-pressed={detail === 'register'} onClick={() => { setDetail('register'); onContext('Member'); }}>Pendaftaran <span aria-hidden="true">+</span></button>
-        <button aria-pressed={detail === 'profile'} onClick={() => { setDetail('profile'); onContext('Member'); }}>Profil anggota <span aria-hidden="true">+</span></button>
-      </div>
-      <p className="member-detail" aria-live="polite"><ChangingText changeKey={detail}>{detail === 'register' ? 'Anggota membuat akun melalui formulir pendaftaran, lalu masuk untuk mengakses keanggotaannya.' : 'Informasi dasar anggota tersimpan dalam profil, termasuk nama dan tanggal bergabung.'}</ChangingText></p>
-      <a className="text-button" href="#contact" onClick={() => onContext('Member')}>Bicarakan kebutuhan <Direction diagonal /></a>
-    </div>
-  </section>;
+  return <MemberStory onContext={onContext} />;
 }
 
 function Institutional({ onContext }: { onContext: (context: Context) => void }) {
-  const [step, setStep] = useState(0);
-  const items = [{ name: 'Data diri', title: 'Perkenalan yang tertata.', text: 'Calon mahasiswa mengisi data pribadi melalui formulir pendaftaran digital.' }, { name: 'Dokumen', title: 'Berkas dalam satu alur.', text: 'Dokumen pendukung diunggah sebagai bagian dari proses pendaftaran.' }, { name: 'Status pendaftaran', title: 'Dikelola oleh institusi.', text: 'Tim institusi melihat daftar pendaftar dan mengelola status pendaftarannya.' }];
-  return <section id="institutional" data-sc-act="flow" className="institution-section">
-    <div className="institution-heading"><span className="chapter-label">ClosePay Institutional / PMB</span><h2>Langkah baru.<br />Dimulai dengan jelas.</h2></div>
-    <div className="institution-image"><div><Photo src="/assets/editorial/institution.webp" alt="Ilustrasi calon mahasiswa menyiapkan dokumen di meja kampus." /></div></div>
-    <div className="institution-bottom">
-      <p className="institution-intro">Dari data diri sampai dokumen pendukung. Pendaftaran mahasiswa baru punya alur digital yang bisa diikuti.</p>
-      <div className="admission-explorer">
-        <div className="admission-tabs" aria-label="Alur PMB">{items.map((item, index) => <button key={item.name} aria-pressed={step === index} onClick={() => { setStep(index); onContext('Institutional'); }}>{item.name}</button>)}</div>
-        <div aria-live="polite" className="admission-detail"><h3><ChangingText changeKey={step}>{items[step].title}</ChangingText></h3><p><ChangingText changeKey={step}>{items[step].text}</ChangingText></p></div>
-        <a className="text-button" href="#contact" onClick={() => onContext('Institutional')}>Bicarakan kebutuhan <Direction diagonal /></a>
-      </div>
-    </div>
-  </section>;
+  return <SiakadStory onContext={onContext} />;
 }
 
 function Contact({ context, onContext }: { context: Context; onContext: (context: Context) => void }) {
   const href = `mailto:marketing@teknologikartu.com?subject=${encodeURIComponent(`Kebutuhan ClosePay ${context}`)}&body=${encodeURIComponent(`Halo tim ClosePay,\n\nSaya ingin berdiskusi tentang ${context} untuk kebutuhan bisnis/institusi saya.\n\nNama:\nBisnis/institusi:\nKebutuhan:\n`)}`;
-  return <footer id="contact" data-sc-act="flow" className="contact-section"><div className="contact-top"><img src="/assets/brand/closepay-wordmark.webp" alt="ClosePay" width="640" height="151" /><span>Teknologi dekat.<br />Kemungkinan lebih luas.</span></div><h2>Setiap bisnis<br />punya <em>cerita.</em></h2><div className="contact-bottom"><p>Ceritakan keseharian bisnis Anda.<br />Kita mulai dari yang paling dibutuhkan.</p><div className="contact-action"><label htmlFor="business-context">Saya ingin membahas</label><select id="business-context" value={context} onChange={e => onContext(e.target.value as Context)}><option>F&B Suite</option><option>Member</option><option>Institutional</option></select><a className="contact-cta" href={href}>Bicarakan kebutuhan <Direction diagonal /></a><span className="email-note">Membuka aplikasi email Anda.</span></div></div><div className="footer-meta"><span>© 2026 ClosePay · PT Teknologi Kartu Indonesia</span><div><a href="https://closepay.id/privacy-policy" target="_blank" rel="noreferrer">Privasi</a><a href="https://closepay.id/term-condition" target="_blank" rel="noreferrer">Syarat & ketentuan</a><a href="#home">Kembali ke awal ↑</a></div></div></footer>;
+  return <footer id="contact" data-sc-act="flow" className="contact-section"><div className="contact-top"><img src="/assets/brand/closepay-wordmark.webp" alt="ClosePay" width="640" height="151" /><span>Teknologi dekat.<br />Kemungkinan lebih luas.</span></div><h2>Setiap aktivitas<br />punya <em>cerita.</em></h2><div className="contact-bottom"><p>Ceritakan kebutuhan gerai atau kampus Anda.<br />Kita mulai dari yang paling dibutuhkan.</p><div className="contact-action"><label htmlFor="business-context">Saya ingin membahas</label><select id="business-context" value={context} onChange={e => onContext(e.target.value as Context)}><option>F&B Suite</option><option>Member (F&B)</option><option>SIAKAD</option><option>PMB</option></select><a className="contact-cta" href={href}>Bicarakan kebutuhan <Direction diagonal /></a><span className="email-note">Membuka aplikasi email Anda.</span></div></div><div className="footer-meta"><span>© 2026 ClosePay · PT Teknologi Kartu Indonesia</span><div><a href="https://closepay.id/privacy-policy" target="_blank" rel="noreferrer">Privasi</a><a href="https://closepay.id/term-condition" target="_blank" rel="noreferrer">Syarat & ketentuan</a><a href="#home">Kembali ke awal ↑</a></div></div></footer>;
 }
 
 export default function ClosePayExperience() {
   const [context, setContext] = useState<Context>('F&B Suite');
   useClosePayMotion();
-  return <MotionConfig reducedMotion="user"><a className="skip-link" href="#content">Lewati ke konten</a><Header /><main id="content"><Hero /><section className="intro-section" data-sc-act="flow"><span className="intro-label">Teknologi bertemu keseharian.</span><h2>Di balik secangkir kopi,<br />ada banyak tangan<br /><span>yang bekerja.</span></h2><p>ClosePay hadir di antara aktivitas itu. Membantu mencatat pesanan, mengelola keanggotaan, hingga menerima pendaftaran baru.</p></section><OrderJourney onContext={setContext} /><Member onContext={setContext} /><Institutional onContext={setContext} /></main><Contact context={context} onContext={setContext} /></MotionConfig>;
+  return <MotionConfig reducedMotion="user"><a className="skip-link" href="#content">Lewati ke konten</a><Header /><main id="content"><Hero /><section className="intro-section" data-sc-act="flow"><span className="intro-label">Teknologi bertemu keseharian.</span><h2>Di balik secangkir kopi,<br />ada banyak tangan<br /><span>yang bekerja.</span></h2><p>Di gerai, ClosePay menemani kasir dan pelanggan. Di kampus, SIAKAD membantu menata informasi akademik. Kebutuhannya berbeda, kesehariannya sama penting.</p></section><OrderJourney onContext={setContext} /><Member onContext={setContext} /><Institutional onContext={setContext} /><PmbStory onContext={setContext} /></main><Contact context={context} onContext={setContext} /></MotionConfig>;
 }

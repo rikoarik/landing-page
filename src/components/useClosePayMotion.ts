@@ -35,7 +35,7 @@ export function useClosePayMotion() {
       }
       html.dataset.motionMode = reduced ? 'reduced' : 'lenis';
       const cleanups: Array<() => void> = [];
-      const chapters = ['home', 'fnb', 'member', 'institutional', 'contact'];
+      const chapters = ['home', 'fnb', 'member', 'institutional', 'pmb', 'contact'];
       chapters.forEach(id => {
         ScrollTrigger.create({
           trigger: `#${id}`, start: 'top 30%', end: 'bottom 30%',
@@ -70,6 +70,12 @@ export function useClosePayMotion() {
         else { window.scrollTo({ top: destination, behavior: 'instant' }); focus(); }
       };
       document.addEventListener('click', navigate);
+      const onDialog = (event: Event) => {
+        if ((event as CustomEvent<boolean>).detail) lenis?.stop();
+        else lenis?.start();
+      };
+      window.addEventListener('closepay:dialog', onDialog);
+      if (document.querySelector('.screen-dialog[open]')) lenis?.stop();
 
       if (!reduced) {
         // Entrance, scroll and pointer each own a separate nested layer.
@@ -101,17 +107,32 @@ export function useClosePayMotion() {
           color: '#00343d', ease: 'none',
           scrollTrigger: { trigger: '.intro-section', start: 'top 72%', end: 'center 48%', scrub: 0.4 },
         });
-        gsap.from('.member-reveal', {
+        gsap.from('.member-editorial-strip', {
           clipPath: 'inset(0 100% 0 0)', duration: 1.15, ease: 'power3.inOut',
-          scrollTrigger: { trigger: '.member-photo-wrap', start: 'top 86%', once: true },
+          scrollTrigger: { trigger: '.member-editorial-strip', start: 'top 86%', once: true },
         });
-        gsap.from('.member-photo-wrap img', {
-          scale: 1.13, duration: 1.6, ease: 'power2.out',
-          scrollTrigger: { trigger: '.member-photo-wrap', start: 'top 86%', once: true },
+        gsap.from('.member-context-screen', {
+          x: 50, rotate: -3, duration: 1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.member-screen-composition', start: 'top 85%', once: true },
         });
         gsap.from('.member-emphasis', {
           yPercent: 105, rotate: -3, duration: 0.85, ease: 'power3.out',
-          scrollTrigger: { trigger: '.member-copy h2', start: 'top 82%', once: true },
+          scrollTrigger: { trigger: '.member-story-heading h2', start: 'top 82%', once: true },
+        });
+        // React Bits-inspired expansion, owned by the existing scroll clock.
+        gsap.from('.academic-surface', {
+          clipPath: desktop ? 'inset(5% 12% 5% 12%)' : 'inset(3% 4% 3% 4%)', ease: 'none',
+          scrollTrigger: { trigger: '.academic-surface', start: 'top 94%', end: 'top 45%', scrub: .45 },
+        });
+        document.querySelectorAll('.editorial-words').forEach(heading => {
+          gsap.from(heading.querySelectorAll('.editorial-word'), {
+            yPercent: 110, rotate: 3, duration: .85, stagger: .11, ease: 'power3.out',
+            scrollTrigger: { trigger: heading, start: 'top 88%', once: true },
+          });
+        });
+        gsap.from('.admission-art', {
+          y: 40, rotate: -3, duration: 1.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.admission-desk', start: 'top 85%', once: true },
         });
         gsap.from('.institution-image', {
           clipPath: 'inset(15% 10% 15% 10%)', ease: 'none',
@@ -159,6 +180,7 @@ export function useClosePayMotion() {
         clearTimeout(refreshTimer);
         resize.disconnect();
         document.removeEventListener('click', navigate);
+        window.removeEventListener('closepay:dialog', onDialog);
         cleanups.forEach(cleanup => cleanup());
         lenis?.off('scroll', ScrollTrigger.update);
         gsap.ticker.remove(tick);

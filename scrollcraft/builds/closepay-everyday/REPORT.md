@@ -1,73 +1,71 @@
-# ClosePay: hasil implementasi dan motion refinement
+# ClosePay: product presentation refinement
 
-Status: selesai untuk preview lokal. Halaman yang sudah ada diteruskan, bukan dibangun ulang. Preview: http://localhost:4500. Tidak ada deployment publik, commit, push, atau email terkirim.
+Preview lokal: http://localhost:4501. Refinement meneruskan halaman yang sama, termasuk hero, identitas, alur tiket F&B, Lenis, GSAP dan Motion. Tidak ada deployment, commit, push atau email terkirim. Creative direction mengikuti delegasi pengguna; antislop DURING, ENERGY 3 / RHYTHM 3 / MOTION 3.
 
-Creative direction dan keputusan gerak disusun berdasarkan delegasi eksplisit pengguna, bukan hasil wawancara tambahan. Mode antislop DURING; ENERGY 3 / RHYTHM 3 / MOTION 3. Rincian awal tersedia di [BRIEF.md](BRIEF.md), kepemilikan animasi dan alasan teknik di [MOTION.md](MOTION.md).
+## Hasil visual dan cerita produk
 
-## Yang berubah
+- F&B: potongan menu asli menjadi konteks bagi detail varian dan jenis pesanan. Checkout, Kitchen dan transaksi mendapat bidang baca lebar. Kontrol pemeriksaan gambar dipindah ke bawah agar tidak menyerupai bingkai aplikasi tambahan.
+- Member: pengalaman pelanggan F&B, dari restoran/menu ke varian, checkout dan QRIS. Komposisi menghubungkan menu/minuman dengan detail pilihan. Pengunjung bisa membandingkan antarmuka varian pelanggan dengan kasir, serta membuka halaman masuk.
+- SIAKAD: indeks kegiatan KRS, jadwal, tagihan dan ringkasan akademik. Lembar informasi diperluas, dengan crop mobile khusus untuk detail sumber yang relevan.
+- PMB: tiga folio editorial memperlihatkan data pendaftar, dokumen pendukung dan administrasi. Ini berlabel ilustrasi alur dari riset, bukan screenshot atau formulir aplikasi. Tidak ada status kelulusan, field, transaksi atau fitur otomatis yang dikarang.
+- Semua screenshot bersumber dari `public/assets/closepay/`, tanpa mengganti warna atau isi UI. Gambar utuh tersedia melalui dialog, dengan pilihan ukuran asli dan sesuaikan layar.
 
-- Lenis memakai GSAP ticker sebagai satu clock; ScrollTrigger mengikuti event Lenis. Runtime ScrollCraft lama tidak lagi dimuat dan CSS native smooth scroll dimatikan.
-- Hero memiliki entrance tipografi bermasker, pembukaan foto, gerak cup yang berlapis, respons pointer, dan kamera yang berhenti setelah 4,5 detik.
-- Pilihan tahap F&B mempertahankan kendali manual. Tiket mengikuti tahap dengan spring, sementara penjelasan berganti melalui mask. Tombol resume mengembalikan kendali ke posisi scroll.
-- Foto Member dan PMB memiliki karakter reveal berbeda. Navigasi menandai bab aktif. Menu, Purchaser, pergantian teks, garis pilihan, dan CTA mendapat interaksi lokal.
-- Magnetik hanya menggerakkan panah, sehingga area klik tidak berpindah. Navigasi memindahkan fokus keyboard setelah sampai ke tujuan.
-- Reduced motion menghilangkan Lenis, gerak spasial, kamera, mask tersembunyi, dan sticky scene. Sentuhan mobile tetap native.
+Batas fakta dan alasan setiap komposisi ada di [PRODUCT-STORY.md](PRODUCT-STORY.md). Riset (8) menyebut source aplikasi yang tidak tersedia di checkout; PMB mengikuti temuan terbatas dari riset tersebut, bukan verifikasi backend baru. Bukti screenshot dan koreksi pengguna mengungguli copy Member lama.
 
-Logo, urutan bab, copy produk, pilihan konteks dan aset editorial yang sudah ada dipertahankan. Tidak ada dashboard, fitur atau klaim produk baru.
+## React Bits dan kepemilikan motion
 
-## Bukti pemeriksaan
+[React Bits](https://reactbits.dev/) dipelajari melalui dokumentasi resmi SplitText, ScrollExpand dan AccordionGallery. Pola word-mask dan ekspansi bidang diimplementasikan khusus dalam sistem animasi yang ada, bukan mengimpor komponen atau menambah dependency. Image Trail tidak digunakan karena tidak membantu membaca alur produk.
 
-| Pemeriksaan | Hasil | Bukti |
+GSAP mengatur masuknya kata, konteks visual, dan ekspansi lembar SIAKAD. Motion mengatur pergantian screenshot, kamera crop, penjelasan, dan susunan folio PMB. Keduanya memiliki elemen berbeda. Lenis tetap memakai satu GSAP ticker dengan ScrollTrigger update; tidak ada clock scroll kedua. Dialog menghentikan Lenis, menjaga scrolling gambar tetap native, dan memulihkan fokus saat ditutup. Reduced motion menghilangkan perpindahan spasial dan menampilkan pilihan langsung.
+
+## Bukti validasi
+
+| Pemeriksaan | Hasil dan bukti |
+| --- | --- |
+| Production build + TypeScript | PASS, halaman utama 187 kB first-load JS; `npm run build`, exit 0 |
+| Desktop 1440×900 | PASS, 0 error runtime, 0 pelanggaran Axe, tanpa overflow atau target di bawah 44 px |
+| Mobile 390×844 dan 360×640 | PASS, hasil yang sama, semua jalur produk dan kontrol asli diperiksa |
+| Tablet 768×1024 | PASS, hasil yang sama |
+| Reduced motion 1440×900 | PASS, seluruh pilihan tetap bekerja tanpa Lenis |
+| Interaksi produk | 45 kelompok pemeriksaan pada lima konfigurasi; [verification.json](lab/product-final/verification.json) |
+| Gagal gambar + retry | PASS, source gambar diblokir lalu dipulihkan; retry memuat screenshot asli |
+| Sampling scroll | 37 frame per mode desktop/mobile/reduced, 111 frame; tidak ada dead-scroll flag, request gagal atau console error |
+| Visual produk | 48 frame yang posisi viewport-nya diperiksa pada desktop/mobile/compact; [frame evidence](lab/product-frames/verification.json) |
+| Inertia dan sinkronisasi | Satu input wheel bergerak menuju target tanpa overshoot; empat posisi tiket sesuai empat tahap; pilihan manual bertahan |
+| Lifecycle | Tiga siklus preferensi motion tidak menambah listener scroll/wheel/touch/resize |
+| Keyboard dan dialog | Pilihan bekerja dengan Enter/Space; outline terlihat; Escape menutup dialog dan fokus kembali; background native modal tidak menerima tab |
+| Touch | Swipe native diuji melalui emulasi Chrome; tanpa overflow atau sticky scene pada mobile |
+| Tanpa JavaScript | Headline, gambar hero, teks server dan anchor tersedia; eksplorasi produk tetap memerlukan JavaScript |
+| Diff | `git diff --check` PASS |
+
+Bukti motion: [verification.json](lab/product-motion/verification.json). Pemeriksaan keyboard/dialog dan HTTP 200 kedua link legal: [keyboard.json](lab/product-final/keyboard.json). Frame median 16,7 ms dan p95 16,8 ms; normal-motion CLS 0,000048 pada run Chrome lokal ini. Pengukuran lokal bukan benchmark perangkat fisik. Normal-motion CLS dipisahkan dari perubahan layout saat preferensi OS menghapus sticky scene. Harness tidak mengukur kontras setiap frame karena halaman tidak memakai cue teks engine; Axe menguji kelima konfigurasi, disertai pemeriksaan piksel terhadap bidang baca solid.
+
+Contact sheets: [desktop](lab/refined-desktop/sheet.png), [mobile](lab/refined-mobile/sheet.png), [reduced](lab/refined-reduced/sheet.png). Frame per pilihan ada di `lab/product-frames/`; screenshot yang menyertai click-through ada di `lab/product-final/`. Frame visual terpisah dipakai agar momentum navigasi CTA tidak menggeser screenshot ke bab lain.
+
+## Click-through
+
+Navigasi seluruh bab, menu mobile/Escape, asal pesanan Staff POS/Kiosk, empat tahap tiket, lanjut/ulang, Purchaser, lima pilihan F&B, empat pilihan Member, perbandingan pelanggan/kasir, login/kembali, empat pilihan SIAKAD, tiga tahap PMB, fokus/konteks gambar, buka gambar utuh, ukuran asli/sesuaikan, Escape/tutup, dan keempat konteks kontak diperiksa. Klik mailto diintersepsi; tidak ada pesan dikirim atau pembayaran dibuat.
+
+## Feel check dan score
+
+Urutan rasa setelah meninjau frame: penasaran → dekat → terlibat → memilih → terarah → bersiap → menghubungi. Ini sesuai kurva dasar yang disepakati; PMB menambah jeda persiapan sebelum penutup. F&B tetap satu-satunya held scene dan perubahan alur terbesar. Member dan SIAKAD kini memberi bukti konkret setelah pengalaman tiket; PMB tidak menyamar sebagai produk yang sudah memiliki screenshot.
+
+| Bab | Perangkat visual/motion | Fungsi |
 | --- | --- | --- |
-| Production build dan TypeScript | PASS; halaman utama 182 kB first-load JS menurut Next build | `npm run build`, exit 0 |
-| Desktop 1440×900 | PASS; 11 kelompok interaksi, 0 error, 0 pelanggaran Axe, 0 target di bawah 44 px | [verification.json](lab/final/verification.json) |
-| Mobile 390×844 | PASS; 11 kelompok interaksi, 0 error, 0 pelanggaran Axe, tanpa overflow | [verification.json](lab/final/verification.json) |
-| Compact 360×640 | PASS; CTA hero masuk viewport pertama, 11 kelompok interaksi, 0 error dan pelanggaran Axe | [compact hero](lab/final/compact-hero.png) |
-| Tablet 768×1024 | PASS; 10 kelompok interaksi, 0 error dan pelanggaran Axe | [verification.json](lab/final/verification.json) |
-| Reduced motion 1440×900 | PASS; 10 kelompok interaksi dan hero diam dalam perbandingan pixel setelah waktu/pointer berubah | [motion verification](lab/motion/verification.json) |
-| Wheel inertia | PASS; input 650 px menghasilkan lintasan 67 → 284 → 399 → … → 646 px, tanpa overshoot atau perpindahan ganda | [motion verification](lab/motion/verification.json) |
-| Anchor dan fokus | PASS; Member berhenti pada 104,25 px, fokus di section Member, penanda navigasi sesuai | [member frame](lab/motion/member-rest.png) |
-| Sinkronisasi F&B | PASS; empat posisi menghasilkan empat tahap; pilihan manual tetap setelah scroll | [motion verification](lab/motion/verification.json) |
-| Lifecycle | PASS; tiga siklus perubahan preferensi tidak menambah listener wheel, touch, scroll atau resize | [motion verification](lab/motion/verification.json) |
-| Touch | PASS di emulasi Chrome; swipe native berpindah 465 px; order tidak sticky, tanpa overflow | [touch capture](lab/motion/mobile-touch.png) |
-| Keyboard | PASS; Enter pada anchor memindahkan fokus, Enter/Space mengoperasikan asal/tahap, Escape menutup menu dan memulihkan fokus | Dua verification JSON |
-| Aset gagal dimuat | PASS; error terlihat, retry benar-benar memuat foto setelah koneksi dipulihkan | [image error](lab/final/image-error.png) |
-| Konten tanpa JavaScript | PASS untuk konten server dan gambar; kontrol React tetap membutuhkan JavaScript | [motion verification](lab/motion/verification.json) |
-| Scrollcraft sampling | PASS; 31 sampel × 3 mode, tidak ada dead-scroll flag atau console error | [desktop](lab/motion-desktop/report.json), [mobile](lab/motion-mobile/report.json), [reduced](lab/motion-reduced/report.json) |
-| Visual | Contact sheet ketiga mode, entrance, hero compact, Member, F&B dan PMB ditinjau langsung | [desktop sheet](lab/motion-desktop/sheet.png), [mobile sheet](lab/motion-mobile/sheet.png), [reduced sheet](lab/motion-reduced/sheet.png) |
-| Legal links | Kedua URL resmi merespons HTTP 200 | `https://closepay.id/privacy-policy`, `https://closepay.id/term-condition` |
-| Diff hygiene | PASS | `git diff --check`, exit 0 |
+| Cover | Tipografi mask, foto dan cup berlapis | Identitas dan konteks manusia; dipertahankan |
+| Intro | Alur baca tenang | Jeda sebelum interaksi utama |
+| F&B | Tiket interaktif + komposisi menu/detail | Hubungkan aktivitas tim dengan UI asli |
+| Member | Sumber menu dan detail pilihan, perpindahan sudut pandang | Jelaskan sisi pelanggan dari F&B |
+| SIAKAD | Lembar yang mengembang dan indeks kegiatan | Membaca kegiatan akademik secara bertahap |
+| PMB | Folio berpindah menurut peran/tahap | Jelaskan proses tanpa menciptakan antarmuka palsu |
+| Contact | Tipografi statis dan konteks tersimpan | Tutup dengan tindakan yang relevan |
 
-Pengukuran Chrome lokal: median frame 16,7 ms, p95 16,8 ms; satu long task 54 ms; layout shift pada pemuatan dan interaksi normal sekitar 0,000048. Total shift pengujian 0,72 mencakup perubahan layout yang disengaja saat preferensi OS diganti berulang kali, karena sticky scene dipendekkan menjadi alur biasa. Angka ini bukan benchmark perangkat fisik atau klaim performa produksi.
+Grammar tetap editorial field journal dengan interactive foldout. Penolakan delapan grammar stock ada pada BRIEF. Ini refinement build yang sama, sehingga tidak membuat baris fingerprint baru atau memaksakan perubahan 4/6 dimensi. Tidak ada aset generatif baru; foto editorial yang ada dipertahankan.
 
-Harness ScrollCraft tidak mengukur kontras komposit khusus karena halaman tidak memakai cue teks engine. Kontras diperiksa dengan Axe pada kelima konfigurasi dan inspeksi visual terhadap latar solid; tidak diklaim sebagai pengujian otomatis setiap frame animasi.
+## Koreksi selama pemeriksaan dan batas
 
-## Click-through yang direkam
+Label ARIA pada span teks animasi diganti dengan teks utuh untuk pembaca layar; target PMB diperluas menjadi 44 px; jarak folio mobile diperbesar; crop KRS dan tagihan mobile dipusatkan pada detail sumber. Screenshot visual kini diambil terpisah dari navigasi CTA yang masih memiliki momentum.
 
-- Logo dan “Kembali ke awal” menuju `#home`; skip link menuju konten; semua target anchor ada.
-- Navigasi desktop F&B, Member, Institutional dan kontak membuka bab yang tepat.
-- Menu mobile membuka/menutup; Escape memulihkan fokus; keempat tautan menutup menu dan berpindah bab.
-- “Ikuti satu pesanan” membuka F&B. Staf kasir dan Kiosk mempertahankan asal pesanan pada seluruh empat tahap.
-- Empat tombol tahap, Lanjutkan, Ulangi dan Ikuti posisi halaman mengubah atau memulihkan alur dengan benar.
-- Purchaser membuka/menutup keterangan. CTA-nya membawa konteks F&B ke kontak.
-- Pendaftaran dan Profil anggota mengubah keterangan; CTA membawa konteks Member.
-- Data diri, Dokumen dan Status pendaftaran mengubah keterangan; CTA membawa konteks Institutional.
-- Ketiga pilihan kontak membentuk subjek/body email sesuai konteks. Klik CTA email diperiksa dengan intersepsi agar aplikasi email tidak diluncurkan atau pesan terkirim.
-- Retry foto memulihkan gambar setelah kegagalan jaringan simulasi. Link legal benar-benar tersedia.
+Belum diperiksa pada perangkat iPhone/Android fisik atau Safari. PMB belum memiliki screenshot asli. Tidak ada perubahan dependency; catatan audit Next/PostCSS dari pekerjaan sebelumnya tetap menjadi urusan pemeliharaan dependency terpisah. Versi lama hasil uji di `lab/final/` dan `lab/motion-*` bukan bukti perubahan ini.
 
-## Temuan yang diperbaiki
-
-1. Dua pemilik scroll: ScrollCraft JS dan Motion scroll dihapus dari runtime, diganti satu jalur Lenis/GSAP. Motion hanya memiliki pointer dan perubahan state.
-2. Anchor awal berhenti pada 290,25 px karena offset CSS dihitung lagi oleh Lenis. Target numerik memperbaikinya menjadi 104,25 px. Assertion anchor kini lolos.
-3. Pengukuran layout awal mencampur kondisi normal dengan perubahan preferensi OS. Laporan sekarang memisahkan kedua kondisi, tanpa menyembunyikan angka total.
-4. Checker desain menandai implementasi fill teks sebagai gradient-text. Efek diganti dengan transisi warna tinta solid; tidak ada ignore/suppression yang ditambahkan.
-5. Kamera hero tidak dibuat berulang tanpa batas; settle berhenti dalam lima detik dan tidak bersaing dengan aktivitas membaca.
-6. Pemeriksaan awal sebelum refinement menemukan opacity label menurunkan kontras, watermark dekoratif, posisi CTA compact, dan status loading gambar cached. Semuanya telah diperbaiki; bukti lama disimpan di `lab/accessibility-before-fixes.json` dan hasil final berada di `lab/final/`.
-
-## Fingerprint dan batas verifikasi
-
-Grammar tetap editorial field journal dengan interactive foldout. Signature: satu tiket kopi yang dapat diarahkan dari kasir atau kiosk ke tahap Kitchen. Pembukaan berupa komposisi foto berlapis; penutup berupa undangan percakapan dengan konteks yang dipertahankan. Delapan grammar stock ditolak dengan alasan di BRIEF. Registry awal kosong; ini baris pertama dan bukan variasi build terdahulu. Panjang tidak ditambah untuk memenuhi angka viewport karena pengguna meminta struktur sekarang dipertahankan.
-
-Belum diuji pada Safari/iOS/Android fisik. Source aplikasi produk yang dirujuk riset tidak ada di checkout, sehingga fakta produk mengikuti laporan proyek yang diberikan. Review Endor Lenis terbatas oleh koneksi yang tidak tersedia. Audit npm masih mencatat Next.js lama sebagai critical dan PostCSS terkait sebagai high; pembaruan major tidak dicampurkan ke perubahan motion. Gunakan npm/`package-lock.json` untuk instalasi yang telah diverifikasi; `bun.lock` bawaan tidak diperbarui.
-
-Lihat [DELIVERY-GATE.md](DELIVERY-GATE.md) untuk seluruh item antislop dan bukti per item.
+Gate per item: [DELIVERY-GATE.md](DELIVERY-GATE.md).
