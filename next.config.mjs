@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: process.env.CLOSEPAY_BUILD_DIR || '.next',
+  ...(process.env.CLOSEPAY_BUILD_DIR ? { distDir: process.env.CLOSEPAY_BUILD_DIR } : {}),
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],

@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "CLOSEPAY_BUILD_DIR=.next-production next build",
-    "start": "CLOSEPAY_BUILD_DIR=.next-production next start",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
